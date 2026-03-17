@@ -1,0 +1,26 @@
+/* Footer.css */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on top */
+    position: fixed; /* Fix the footer to the bottom */
+    bottom: 0; /* Ensure it's at the bottom */
+    left: 0; /* Ensure it spans the whole width */
+    width: 100%; /* Make it span the full width of the page */
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* To avoid overlapping the footer with the content above */
+  body {
+    margin: 0;
+    padding-bottom: 60px; /* Adjust the value according to your footer height */
+  }
+  

@@ -1,0 +1,291 @@
+2025-03-29 13:54:51 | INFO | openai_api_server | args: Namespace(host='localhost', port=8000, controller_address='http://localhost:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2025-03-29 13:54:51 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m9684[0m]
+2025-03-29 13:54:51 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-03-29 13:54:51 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-03-29 13:54:51 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+2025-03-29 13:56:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48382 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2025-03-29 13:56:57 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2025-03-29 13:56:57 | ERROR | stderr | Traceback (most recent call last):
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+2025-03-29 13:56:57 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-29 13:56:57 | ERROR | stderr |     return await self.app(scope, receive, send)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-29 13:56:57 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-29 13:56:57 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-29 13:56:57 | ERROR | stderr |     raise exc
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-29 13:56:57 | ERROR | stderr |     await self.app(scope, receive, _send)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/cors.py", line 85, in __call__
+2025-03-29 13:56:57 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-29 13:56:57 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:56:57 | ERROR | stderr |     raise exc
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:56:57 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 714, in __call__
+2025-03-29 13:56:57 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 734, in app
+2025-03-29 13:56:57 | ERROR | stderr |     await route.handle(scope, receive, send)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 288, in handle
+2025-03-29 13:56:57 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 76, in app
+2025-03-29 13:56:57 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:56:57 | ERROR | stderr |     raise exc
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:56:57 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 73, in app
+2025-03-29 13:56:57 | ERROR | stderr |     response = await f(request)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 301, in app
+2025-03-29 13:56:57 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-29 13:56:57 | ERROR | stderr |     return await dependant.call(**values)
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 423, in create_chat_completion
+2025-03-29 13:56:57 | ERROR | stderr |     gen_params = await get_gen_params(
+2025-03-29 13:56:57 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 328, in get_gen_params
+2025-03-29 13:56:57 | ERROR | stderr |     raise ValueError(f"Unknown role: {msg_role}")
+2025-03-29 13:56:57 | ERROR | stderr | ValueError: Unknown role: lawyer1
+2025-03-29 13:57:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48386 - "[1mPOST /v1/completions HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:57:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:57582 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2025-03-29 13:57:36 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2025-03-29 13:57:36 | ERROR | stderr | Traceback (most recent call last):
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+2025-03-29 13:57:36 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-29 13:57:36 | ERROR | stderr |     return await self.app(scope, receive, send)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-29 13:57:36 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-29 13:57:36 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-29 13:57:36 | ERROR | stderr |     raise exc
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-29 13:57:36 | ERROR | stderr |     await self.app(scope, receive, _send)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/cors.py", line 85, in __call__
+2025-03-29 13:57:36 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-29 13:57:36 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:57:36 | ERROR | stderr |     raise exc
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:57:36 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 714, in __call__
+2025-03-29 13:57:36 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 734, in app
+2025-03-29 13:57:36 | ERROR | stderr |     await route.handle(scope, receive, send)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 288, in handle
+2025-03-29 13:57:36 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 76, in app
+2025-03-29 13:57:36 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:57:36 | ERROR | stderr |     raise exc
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:57:36 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 73, in app
+2025-03-29 13:57:36 | ERROR | stderr |     response = await f(request)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 301, in app
+2025-03-29 13:57:36 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-29 13:57:36 | ERROR | stderr |     return await dependant.call(**values)
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 423, in create_chat_completion
+2025-03-29 13:57:36 | ERROR | stderr |     gen_params = await get_gen_params(
+2025-03-29 13:57:36 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 328, in get_gen_params
+2025-03-29 13:57:36 | ERROR | stderr |     raise ValueError(f"Unknown role: {msg_role}")
+2025-03-29 13:57:36 | ERROR | stderr | ValueError: Unknown role: judge
+2025-03-29 13:58:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:57596 - "[1mPOST /v1/completions HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44686 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2025-03-29 13:58:02 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2025-03-29 13:58:02 | ERROR | stderr | Traceback (most recent call last):
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+2025-03-29 13:58:02 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-29 13:58:02 | ERROR | stderr |     return await self.app(scope, receive, send)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-29 13:58:02 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-29 13:58:02 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-29 13:58:02 | ERROR | stderr |     raise exc
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-29 13:58:02 | ERROR | stderr |     await self.app(scope, receive, _send)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/cors.py", line 85, in __call__
+2025-03-29 13:58:02 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-29 13:58:02 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:58:02 | ERROR | stderr |     raise exc
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:58:02 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 714, in __call__
+2025-03-29 13:58:02 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 734, in app
+2025-03-29 13:58:02 | ERROR | stderr |     await route.handle(scope, receive, send)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 288, in handle
+2025-03-29 13:58:02 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 76, in app
+2025-03-29 13:58:02 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:58:02 | ERROR | stderr |     raise exc
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:58:02 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 73, in app
+2025-03-29 13:58:02 | ERROR | stderr |     response = await f(request)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 301, in app
+2025-03-29 13:58:02 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-29 13:58:02 | ERROR | stderr |     return await dependant.call(**values)
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 423, in create_chat_completion
+2025-03-29 13:58:02 | ERROR | stderr |     gen_params = await get_gen_params(
+2025-03-29 13:58:02 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 328, in get_gen_params
+2025-03-29 13:58:02 | ERROR | stderr |     raise ValueError(f"Unknown role: {msg_role}")
+2025-03-29 13:58:02 | ERROR | stderr | ValueError: Unknown role: lawyer2
+2025-03-29 13:58:21 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44698 - "[1mPOST /v1/completions HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49576 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2025-03-29 13:58:22 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2025-03-29 13:58:22 | ERROR | stderr | Traceback (most recent call last):
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+2025-03-29 13:58:22 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-29 13:58:22 | ERROR | stderr |     return await self.app(scope, receive, send)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-29 13:58:22 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-29 13:58:22 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-29 13:58:22 | ERROR | stderr |     raise exc
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-29 13:58:22 | ERROR | stderr |     await self.app(scope, receive, _send)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/cors.py", line 85, in __call__
+2025-03-29 13:58:22 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-29 13:58:22 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:58:22 | ERROR | stderr |     raise exc
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:58:22 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 714, in __call__
+2025-03-29 13:58:22 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 734, in app
+2025-03-29 13:58:22 | ERROR | stderr |     await route.handle(scope, receive, send)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 288, in handle
+2025-03-29 13:58:22 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 76, in app
+2025-03-29 13:58:22 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:58:22 | ERROR | stderr |     raise exc
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:58:22 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 73, in app
+2025-03-29 13:58:22 | ERROR | stderr |     response = await f(request)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 301, in app
+2025-03-29 13:58:22 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-29 13:58:22 | ERROR | stderr |     return await dependant.call(**values)
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 423, in create_chat_completion
+2025-03-29 13:58:22 | ERROR | stderr |     gen_params = await get_gen_params(
+2025-03-29 13:58:22 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 328, in get_gen_params
+2025-03-29 13:58:22 | ERROR | stderr |     raise ValueError(f"Unknown role: {msg_role}")
+2025-03-29 13:58:22 | ERROR | stderr | ValueError: Unknown role: lawyer1
+2025-03-29 13:58:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49590 - "[1mPOST /v1/completions HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39348 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2025-03-29 13:58:54 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2025-03-29 13:58:54 | ERROR | stderr | Traceback (most recent call last):
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+2025-03-29 13:58:54 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-29 13:58:54 | ERROR | stderr |     return await self.app(scope, receive, send)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-29 13:58:54 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-29 13:58:54 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-29 13:58:54 | ERROR | stderr |     raise exc
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-29 13:58:54 | ERROR | stderr |     await self.app(scope, receive, _send)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/cors.py", line 85, in __call__
+2025-03-29 13:58:54 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-29 13:58:54 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:58:54 | ERROR | stderr |     raise exc
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:58:54 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 714, in __call__
+2025-03-29 13:58:54 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 734, in app
+2025-03-29 13:58:54 | ERROR | stderr |     await route.handle(scope, receive, send)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 288, in handle
+2025-03-29 13:58:54 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 76, in app
+2025-03-29 13:58:54 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:58:54 | ERROR | stderr |     raise exc
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:58:54 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 73, in app
+2025-03-29 13:58:54 | ERROR | stderr |     response = await f(request)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 301, in app
+2025-03-29 13:58:54 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-29 13:58:54 | ERROR | stderr |     return await dependant.call(**values)
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 423, in create_chat_completion
+2025-03-29 13:58:54 | ERROR | stderr |     gen_params = await get_gen_params(
+2025-03-29 13:58:54 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 328, in get_gen_params
+2025-03-29 13:58:54 | ERROR | stderr |     raise ValueError(f"Unknown role: {msg_role}")
+2025-03-29 13:58:54 | ERROR | stderr | ValueError: Unknown role: judge
+2025-03-29 13:59:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39362 - "[1mPOST /v1/completions HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:59:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33912 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [91m500 Internal Server Error[0m
+2025-03-29 13:59:25 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2025-03-29 13:59:25 | ERROR | stderr | Traceback (most recent call last):
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+2025-03-29 13:59:25 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+2025-03-29 13:59:25 | ERROR | stderr |     return await self.app(scope, receive, send)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/applications.py", line 1054, in __call__
+2025-03-29 13:59:25 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+2025-03-29 13:59:25 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 187, in __call__
+2025-03-29 13:59:25 | ERROR | stderr |     raise exc
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/errors.py", line 165, in __call__
+2025-03-29 13:59:25 | ERROR | stderr |     await self.app(scope, receive, _send)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/cors.py", line 85, in __call__
+2025-03-29 13:59:25 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+2025-03-29 13:59:25 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:59:25 | ERROR | stderr |     raise exc
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:59:25 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 714, in __call__
+2025-03-29 13:59:25 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 734, in app
+2025-03-29 13:59:25 | ERROR | stderr |     await route.handle(scope, receive, send)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 288, in handle
+2025-03-29 13:59:25 | ERROR | stderr |     await self.app(scope, receive, send)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 76, in app
+2025-03-29 13:59:25 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2025-03-29 13:59:25 | ERROR | stderr |     raise exc
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2025-03-29 13:59:25 | ERROR | stderr |     await app(scope, receive, sender)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/starlette/routing.py", line 73, in app
+2025-03-29 13:59:25 | ERROR | stderr |     response = await f(request)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 301, in app
+2025-03-29 13:59:25 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+2025-03-29 13:59:25 | ERROR | stderr |     return await dependant.call(**values)
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 423, in create_chat_completion
+2025-03-29 13:59:25 | ERROR | stderr |     gen_params = await get_gen_params(
+2025-03-29 13:59:25 | ERROR | stderr |   File "/home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/fastchat/serve/openai_api_server.py", line 328, in get_gen_params
+2025-03-29 13:59:25 | ERROR | stderr |     raise ValueError(f"Unknown role: {msg_role}")
+2025-03-29 13:59:25 | ERROR | stderr | ValueError: Unknown role: lawyer2
+2025-03-29 13:59:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33918 - "[1mPOST /v1/completions HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 14:01:01 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-03-29 14:01:02 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-03-29 14:01:02 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-03-29 14:01:02 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m9684[0m]

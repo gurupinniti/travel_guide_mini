@@ -1,0 +1,26 @@
+/* Header.css */
+.header-class {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5em; /* Make header text larger */
+    background-color: hsla(185, 84%, 19%, 0.7); /* Slightly stronger background */
+    border: 2px solid #000; /* Border color */
+    border: none;
+    border-radius: 5px;
+    margin: 0;
+    padding: 20px; /* Add more padding for a better look */
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for elegance */
+  }
+  
+  .header-class h2 {
+    margin: 0;
+    padding-bottom: 10px; /* Space below the heading */
+  }
+  
+  .header-class p {
+    font-size: 0.30em; /* Adjust size */
+    margin: 0;
+    padding-top: 5px;
+  }
+  

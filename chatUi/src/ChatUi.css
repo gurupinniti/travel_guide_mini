@@ -1,0 +1,355 @@
+  /* MusicGen.css */
+
+/* Input Container */
+.input-container {
+  margin:10px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+  width: 100%; /* Make sure it doesn't overflow */
+  outline: hsl(186, 90%, 24%);
+  border: blue;
+}
+
+.input-container input {
+  width: 1500px; /* Limit input to 200px width */
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: hsl(274, 100%, 10%);
+  
+}
+
+.submit-button {
+  padding: 10px;
+  width: 100px; /* Fixed width for the button */
+  height: 50px; /* Fixed height */
+  background-color: transparent; /* No background */
+  border: none; /* No border */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button:hover {
+  opacity: 0.7; /* Slight fade effect on hover */
+  border-radius: 50%; /* Ensure it stays circular on hover */
+}
+
+.submit-button img {
+  width: 100%; /* Make the image fill the button */
+  height: 100%;
+  object-fit: contain; /* Maintain the aspect ratio */
+}
+
+/* Button Style */
+.lang-button {
+  padding: 10px;
+  width: 130px; /* Fixed width for the button */
+  height: 70px; /* Fixed height for a consistent look */
+  background-color: transparent; /* No background */
+  border: none; /* No border */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circular button */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for button */
+.lang-button:hover {
+  opacity: 0.8; /* Slight fade effect on hover */
+  transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Image inside the button */
+.lang-button img {
+  width: 100%; /* Make the image fill the button */
+  height: 100%;
+  object-fit: cover; /* Fill the button area while maintaining aspect ratio */
+  border-radius: 10%; /* Make image rounded to fit the circular button */
+}
+.outer-container {
+  /* background-color: black; */
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.first-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between child elements */
+  flex: 2; /* Adjust the flex if needed */
+  width: 60%;
+  padding: 20px; /* Padding inside the column for spacing */
+  background-color: #fff; /* White background color for the card */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the card */
+  border: 1px solid #ddd; /* Light border color */
+}
+
+.inner-column {
+  display: flex;
+  gap: 20px; /* Ensure columns are spaced apart */
+}
+
+.inner-first-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  gap:0px;/* Fixed width for the buttons */
+  margin: 0px;
+  width: 12%; 
+  height: 100%; 
+  padding:12px;
+  margin-bottom: 5px;
+}
+
+.inner-second-column {
+  flex: 1; /* Take up the remaining space */
+  /* background-color: pink; */
+  background-color: hsl(195, 70%, 90%); /* White background color for the card */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the card */
+  border: 1px solid #ddd; /* Light border color */
+}
+
+.scroll-box {
+
+  /* border: 1px solid #ccc; */
+  padding: 40px;
+  height: 200px;
+  width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.scroll-box {
+  position: relative; /* Added for positioning the copy button */
+  padding: 40px;
+  height: 200px;
+  width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  user-select: auto; /* Allow text selection */
+}
+
+/* Add this at the end of MusicGen.css */
+
+.alert-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1000; /* Make sure it appears above other elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.alert-message {
+  margin-bottom: 10px;
+}
+
+.alert-close-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.alert-close-button:hover {
+  background-color: #0056b3;
+}
+
+/* Ensure the copy icon is styled correctly */
+.copy-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+
+
+.second-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Space between file name and audio player */
+  padding: 40px;
+  height: 200px;
+  background-color: hsl(210, 36%, 96%); /* Light blue-gray background color */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the card */
+  border: 1px solid #ddd; /* Light border color */
+}
+
+.media-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px; /* Match the width of the buttons' column */
+  height: 100%; /* Align with the text box height */
+}
+
+.file-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Default color, will be overridden by animation */
+  margin-bottom: 10px; /* Space between the file name and the audio player */
+}
+
+.file-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Default color, will be overridden by animation */
+  margin-bottom: 40px; /* Space between the file name and the audio player */
+}
+
+.flash {
+  animation: flash 5s infinite; /* Slower speed with 3s duration */
+}
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+    color: red; /* Start color */
+  }
+  25%{
+    opacity: 0.8;
+    color: purple; /* Intermediate color */
+  }
+  50% {
+    opacity: 0.6;
+    color: blue; /* Intermediate color */
+  }
+  66% {
+    opacity: 0.4;
+    color: green; /* Another intermediate color */
+  }
+  88% {
+    opacity: 0.2;
+    color: black; /* Another intermediate color */
+  }
+}
+
+audio {
+  width: 100%; /* Make audio player take up full width of container */
+  max-width: 300px; /* Limit max width */
+  background-color: hsl(210, 36%, 96%); /* Match container background */
+  border: 1px solid #ddd; /* Light border to match overall theme */
+  border-radius: 5px; /* Slight rounding of corners */
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  outline: none; /* Remove default outline */
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: hsl(206, 61%, 29%);
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-fullscreen-button {
+  color: #333;
+}
+
+
+button {
+  padding: 10px;
+  font-size: 1em;
+  width: 100%; /* Ensure buttons take up the full width of their container */
+  box-sizing: border-box;
+}
+
+/* Loading indicator styles */
+/* Loader Spinner */
+.loader {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.loading-indicator p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 100px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ccc; 
+  margin-top: 10px;
+  animation: progress 2s infinite;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    background-color: #4caf50;
+  }
+  50% {
+    width: 50%;
+    background-color: #ff9800;
+  }
+  100% {
+    width: 100%;
+    background-color: #f44336;
+  }
+}
+
+/* Error handling styles */
+.error {
+  border: 2px solid red; /* Red border when error occurs */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.input-container input.error {
+  border: 2px solid red; /* Red border when there's an error */
+}

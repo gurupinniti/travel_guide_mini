@@ -1,0 +1,11 @@
+pandas
+numpy
+fastapi
+gunicorn
+requests==2.32.3
+sqlalchemy
+urllib3
+pyodbc
+python-dotenv
+uvicorn
+transformers

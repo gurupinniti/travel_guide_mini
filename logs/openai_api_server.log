@@ -1,0 +1,13 @@
+2025-09-13 23:33:40 | INFO | openai_api_server | args: Namespace(host='localhost', port=8000, controller_address='http://localhost:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2025-09-13 23:33:40 | ERROR | stderr | INFO:     Started server process [6376]
+2025-09-13 23:33:40 | ERROR | stderr | INFO:     Waiting for application startup.
+2025-09-13 23:33:40 | ERROR | stderr | INFO:     Application startup complete.
+2025-09-13 23:33:40 | ERROR | stderr | INFO:     Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+2025-09-13 23:33:46 | ERROR | stderr | /home/aida/anaconda3/envs/autogen/lib/python3.9/site-packages/pydantic/main.py:426: UserWarning: Pydantic serializer warnings:
+2025-09-13 23:33:46 | ERROR | stderr |   Expected `str` but got `bool` with value `False` - serialized value may not be as expected
+2025-09-13 23:33:46 | ERROR | stderr |   return self.__pydantic_serializer__.to_python(
+2025-09-13 23:33:46 | INFO | stdout | INFO:     127.0.0.1:59806 - "GET /v1/models HTTP/1.1" 200 OK
+2025-09-13 23:34:06 | INFO | stdout | INFO:     127.0.0.1:40238 - "GET /v1/models HTTP/1.1" 200 OK
+2025-09-13 23:34:06 | INFO | stdout | INFO:     127.0.0.1:40252 - "GET /v1/models HTTP/1.1" 200 OK
+2025-09-13 23:43:43 | INFO | stdout | INFO:     127.0.0.1:34834 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2025-09-13 23:49:58 | INFO | stdout | INFO:     127.0.0.1:56402 - "POST /v1/chat/completions HTTP/1.1" 200 OK

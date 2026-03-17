@@ -1,0 +1,39 @@
+2025-03-29 13:54:08 | INFO | model_worker | args: Namespace(host='localhost', port=21002, worker_address='http://localhost:21002', controller_address='http://localhost:21001', model_path='TinyLlama/TinyLlama-1.1B-Chat-v1.0', revision='main', device='cpu', gpus=None, num_gpus=1, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2025-03-29 13:54:08 | INFO | model_worker | Loading the model ['TinyLlama-1.1B-Chat-v1.0'] on worker 2dde328d ...
+2025-03-29 13:54:29 | INFO | model_worker | Register to controller
+2025-03-29 13:54:29 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m9428[0m]
+2025-03-29 13:54:29 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-03-29 13:54:29 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-03-29 13:54:29 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:21002[0m (Press CTRL+C to quit)
+2025-03-29 13:55:14 | INFO | model_worker | Send heart beat. Models: ['TinyLlama-1.1B-Chat-v1.0']. Semaphore: None. call_ct: 0. worker_id: 2dde328d. 
+2025-03-29 13:55:59 | INFO | model_worker | Send heart beat. Models: ['TinyLlama-1.1B-Chat-v1.0']. Semaphore: None. call_ct: 0. worker_id: 2dde328d. 
+2025-03-29 13:56:44 | INFO | model_worker | Send heart beat. Models: ['TinyLlama-1.1B-Chat-v1.0']. Semaphore: None. call_ct: 0. worker_id: 2dde328d. 
+2025-03-29 13:56:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58466 - "[1mPOST /worker_get_conv_template HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:56:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58474 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:56:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58488 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:57:29 | INFO | model_worker | Send heart beat. Models: ['TinyLlama-1.1B-Chat-v1.0']. Semaphore: Semaphore(value=4, locked=False). call_ct: 1. worker_id: 2dde328d. 
+2025-03-29 13:57:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58490 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:57:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48154 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:57:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48156 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48162 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34356 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34368 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:15 | INFO | model_worker | Send heart beat. Models: ['TinyLlama-1.1B-Chat-v1.0']. Semaphore: Semaphore(value=4, locked=False). call_ct: 3. worker_id: 2dde328d. 
+2025-03-29 13:58:21 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34376 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34720 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34728 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34740 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48588 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:58:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48596 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:59:00 | INFO | model_worker | Send heart beat. Models: ['TinyLlama-1.1B-Chat-v1.0']. Semaphore: Semaphore(value=4, locked=False). call_ct: 5. worker_id: 2dde328d. 
+2025-03-29 13:59:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48600 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:59:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36908 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:59:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36912 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 13:59:45 | INFO | model_worker | Send heart beat. Models: ['TinyLlama-1.1B-Chat-v1.0']. Semaphore: Semaphore(value=4, locked=False). call_ct: 6. worker_id: 2dde328d. 
+2025-03-29 13:59:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36926 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2025-03-29 14:00:31 | INFO | model_worker | Send heart beat. Models: ['TinyLlama-1.1B-Chat-v1.0']. Semaphore: Semaphore(value=5, locked=False). call_ct: 6. worker_id: 2dde328d. 
+2025-03-29 14:01:16 | INFO | model_worker | Send heart beat. Models: ['TinyLlama-1.1B-Chat-v1.0']. Semaphore: Semaphore(value=5, locked=False). call_ct: 6. worker_id: 2dde328d. 
+2025-03-29 14:01:18 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-03-29 14:01:18 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-03-29 14:01:18 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-03-29 14:01:18 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m9428[0m]

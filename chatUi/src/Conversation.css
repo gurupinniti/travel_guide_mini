@@ -1,0 +1,111 @@
+/* App container */
+.app-container {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Conversation box */
+.conversation-container {
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message wrapper for alignment */
+.message-wrapper {
+    display: flex;
+    margin: 5px 0;
+    max-width: 80%;
+}
+
+/* User messages - Left aligned */
+.user {
+    justify-content: flex-end;
+}
+
+.user .message-card {
+    background-color: #e0f7fa;
+    color: #000;
+    align-self: flex-start;
+}
+
+/* Assistant messages - Right aligned */
+.assistant {
+    justify-content: flex-start;
+}
+
+.assistant .message-card {
+    background-color: #dcedc8;
+    color: #000;
+    align-self: flex-end;
+}
+
+/* Message cards */
+.message-card {
+    padding: 10px 15px;
+    border-radius: 25px;
+    word-wrap: break-word;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Input and button container */
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Metadata container */
+.message-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligns metadata to the right */
+    font-size: 0.7rem; /* 50% smaller */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Timestamp */
+.timestamp {
+    margin-left: 5px;
+    font-size: 0.7rem; /* 50% smaller */
+    font-weight: bold;
+}
+
+/* Read receipt double tick */
+.read-receipt {
+    color: #744caf;
+    font-size: 14px;
+    margin-left: 5px;
+}
